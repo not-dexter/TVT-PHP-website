@@ -1,0 +1,307 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    /*background: linear-gradient(45deg, #49a09d, #5f2c82);*/
+    background-color: #000;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('img_lights.jpg');
+    background-color: #000;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-filter: blur(8px);
+    -moz-filter: blur(8px);
+    -o-filter: blur(8px);
+    -ms-filter: blur(8px);
+    filter: blur(8px);
+}
+  
+.chatsbm {
+    position: fixed;
+    font-size: large;
+    bottom: 10px;
+    width: auto;
+}
+
+.chat {
+    position: absolute;
+    border: 2px solid #000;
+    background-color: rgba(8, 7, 16, 0.8);
+    color: white;
+    width: 40%;
+    height: 25%;
+    bottom: 40px;
+    padding: 5px;
+    font-size: large;
+    overflow: auto;
+}
+
+hr {
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+table.admin {
+    bottom: 50%;
+    left: clamp(240px, 20%, 90%);
+    color: black;
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: clamp(20px, 95%, 95%);
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.admin td,
+table.admin th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 0px;
+}
+
+table.admin tbody td {
+    font-size: 13px;
+}
+
+table.admin thead {
+    background: #000000;
+    border-bottom: 2px solid #444444;
+}
+
+table.admin thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #D0E4F5;
+}
+
+table.admin thead th:first-child {
+    border-left: none;
+}
+
+table.admin tfoot td {
+    font-size: 14px;
+}
+
+.error {
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    color: red;
+    left: 50%;
+    top: 20%;
+}
+.alert {
+    text-align: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: xx-large;
+    color: rgb(0, 201, 0);
+    left: 50%;
+    top: 20%;
+}
+
+.loginform {
+    background-color: #222;
+    height: 280px;
+    width: 400px;
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.8);
+    top: 50%;
+    left: 50%;
+    padding: 10px 0px;
+}
+
+.loginform label {
+    position: fixed;
+    left: 5%;
+}
+
+.loginform input[type=text] {
+    position: fixed;
+    background-color: #222;
+    color: white;
+    border: 0;
+    font-size: large;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    right: 5%;
+    height: 30px;
+}
+
+.loginform input[type=password] {
+    position: fixed;
+    background-color: #222;
+    color: white;
+    border: 0;
+    font-size: large;
+    border-bottom: 2px solid gray;
+    width: 90%;
+    right: 5%;
+    height: 30px;
+}
+
+.loginform button {
+    position: fixed;
+    display: block;
+    border-radius: 10px;
+    border: none;
+    background-color: #111;
+    color: white;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.8);
+    width: 90%;
+    right: 5%;
+    font-size: large;
+    height: 50px;
+    opacity: 0.6;
+    transition: 0.2s
+}
+.loginform button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+.loginform *:focus {
+    outline: none;
+}
+.centertext {
+    text-align: center;
+}
+
+.clock {
+    text-align: center;
+    color: #17D4FE;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 7px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    z-index: 1;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.contentloggedout {
+    background-color: #ddd;
+    padding: 10px;
+    bottom: 0px;
+}
+
+/* Style the side navigation */
+.sidenav {
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow: hidden;
+    transition: 0.5s
+}
+.sidenav.toggle{
+    z-index: 999;
+    overflow: hidden;
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    overflow: hidden;
+    width: 50px;
+}
+
+/* Side navigation links */
+.sidenav a {
+    font-size: large;
+    white-space: nowrap; 
+    overflow: hidden;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.sidenav button {
+    background-color: #111;
+    font-size: large;
+    width: 100%;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    border: none;
+}
+
+/* Change color on hover */
+.sidenav button:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Style the content */
+.content {
+    z-index: 999;
+    color: white;
+    margin-left: 200px;
+    padding-left: 20px;
+    height: 100%;
+    transition: 0.5s;
+}
+
+.content.toggle {
+    margin-left: 50px;
+    padding-left: 20px;
+    transition: 0.5s;
+}
+.footer {
+    background-color: #666666;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
